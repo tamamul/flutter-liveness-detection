@@ -32,9 +32,10 @@ jobs:
       - name: Build APK Split ABI
         run: |
           flutter build apk \
+               --android-skip-build-dependency-validation
             --release \
             --split-per-abi
-
+     
       - name: Show APK Files
         run: |
           ls -lh build/app/outputs/flutter-apk/
