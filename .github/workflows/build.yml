@@ -30,11 +30,7 @@ jobs:
         run: flutter pub get
 
       - name: Build APK Split ABI
-        run: |
-          flutter build apk \
-               --android-skip-build-dependency-validation
-            --release \
-            --split-per-abi
+        run: flutter build apk --release --split-per-abi --android-skip-build-dependency-validation
      
       - name: Show APK Files
         run: |
